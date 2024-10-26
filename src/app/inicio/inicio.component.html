@@ -1,0 +1,144 @@
+<nav class="bg-white dark:bg-gray-900 relative w-full z-20">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+    <!-- Logo a la izquierda -->
+    <a href="#" class="space-x-3 rtl:space-x-reverse order-1 md:order-1 flex items-center">
+      <img src="assets/img/logo.png" alt="Logo" class="h-8">
+    </a>
+
+    <!-- Menú de navegación centrado -->
+    <div class="flex-grow flex justify-center order-2">
+      <ul class="flex space-x-3">
+        <li>
+          <a href="/" class="text-white font-bold text-sm">INICIO</a>
+        </li>
+        <li>
+          <a href="/formulario" class="text-white font-bold text-sm">FORMULARIO DE APROBACIÓN</a>
+        </li>
+        <li>
+          <a href="/contactanos" class="text-white font-bold text-sm">CONTACTANOS</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Ícono de usuario a la derecha -->
+    <a href="/login" class="user-icon order-3 md:ml-4">
+      <img src="assets/img/usuario2.png" alt="Ícono de usuario" class="rounded-full h-10 w-10 border-4 border-white transition-transform transform hover:scale-110">
+    </a>
+  </div>
+</nav>
+
+<body>
+  <div id="default-carousel" class="relative w-full h-screen">
+    <div class="relative h-full">
+      <video autoplay muted loop class="block w-full h-full object-cover">
+        <source src="assets/img/landing.webm" type="video/webm">
+      </video>
+
+      <div class="absolute inset-0 flex items-end justify-center mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 bg-transparent">
+        <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+          <!-- Primer Sección -->
+          <div class="relative lg:row-span-2">
+            <div class="absolute inset-px rounded-lg bg-[#fcfbfb] lg:rounded-l-[2rem] top-6"></div>
+
+
+            <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+              <div class="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm flex flex-col items-center">
+                <div class="relative w-full flex flex-col items-center">
+                  <img src="assets/img/Recurso19.png" alt="Batalla Disponible" class="custom-width h-auto mb-2" />
+                  <div class="absolute top-2 inset-x-0 top-0 flex justify-center items-center h-12 ml-4">
+                    <span class="text-white text-sm font-bold tracking-tight">BATALLA DISPONIBLE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Segunda Sección -->
+          <div class="relative max-lg:row-start-1">
+            <div class="absolute inset-px w-[115%] h-[145%] rounded-lg bg-gradient-to-r from-[#4fa9d3] to-[#054689] max-lg:rounded-t-[2rem] opacity-100 top-6"></div>
+            <div class="relative flex h-[120%] w-[110%] flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
+              <div class="relative w-full flex flex-col items-center">
+                <img src="assets/img/Recurso23.png" alt="Agencias Aliadas" class="custom-width h-auto mb-2" />
+                <img src="assets/img/UNETE_NOSOTRO.JPG" alt="Unete a Nosotros" class="h-auto mb-2" />
+                <div class="absolute inset-x-0 top-2 flex justify-center items-center h-12">
+                  <span class="text-white text-sm font-bold tracking-tight">AGENCIAS ALIADAS APROBADAS</span>
+                </div>
+                <div class="banner-background"></div>
+              </div>
+              <div class="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2"></div>
+            </div>
+          </div>
+
+          <!-- Tercera Sección -->
+          <div class="relative lg:row-span-2">
+            <div class="absolute inset-px rounded-lg bg-gradient-to-r from-[#e05578] to-[#8b2d54] max-lg:rounded-t-[2rem] opacity-100 left-12 pl-5 ml-3 top-6"></div>
+            <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+              <div class="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm flex flex-col items-center">
+                <div class="relative w-full flex flex-col items-center">
+                  <img src="assets/img/Recurso19.png" alt="Top 5 Agencias" class="custom-width h-auto ml-3 mb-2" />
+                  <div class="absolute top-2 inset-x-0 top-0 flex justify-center items-center h-12 ml-4">
+                    <span class="text-white text-sm font-bold tracking-tight">TOP 5 AGENCIAS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nuevo Card debajo -->
+  <div class="max-w-screen-xl mx-auto p-4">
+    <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2  " >
+      <!-- Primer Sección (duplicada) -->
+      <div class="relative lg:row-span-2">
+        <div class="absolute inset-px  rounded-lg bg-gradient-to-r from-[#4fa9d3] to-[#054689] opacity-100 top-6"></div>
+        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+          <div class="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm flex flex-col items-center">
+            <div class="relative w-full flex flex-col items-center">
+              <img src="assets/img/Recurso19.png" alt="Batalla Disponible" class="custom-width h-auto mb-2" />
+              <div class="absolute top-2 inset-x-0 top-0 flex justify-center items-center h-12 ml-4">
+                <span class="text-white text-sm font-bold tracking-tight">PRÓXIMAS BATALLAS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Segunda Sección (duplicada) -->
+      <div class="relative max-lg:row-start-1">
+        <div class="absolute inset-px w-[115%] h-[145%] rounded-lg bg-gradient-to-r from-[#4fa9d3] to-[#054689] max-lg:rounded-t-[2rem] opacity-100 top-6"></div>
+        <div class="relative flex h-[120%] w-[110%] flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
+          <div class="relative w-full flex flex-col items-center">
+            
+            
+          
+            <div class="banner-background"></div>
+          </div>
+          <div class="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2"></div>
+        </div>
+      </div>
+
+      <!-- Tercera Sección (duplicada) -->
+      <div class="relative lg:row-span-2">
+        <div class="absolute inset-px rounded-lg bg-gradient-to-r  from-[#4fa9d3] to-[#054689] max-lg:rounded-t-[2rem] opacity-100 left-12 pl-5 ml-3 top-6"></div>
+        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+          <div class="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm flex flex-col items-center">
+     
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contenedor">
+    <div class="izquierda"></div>
+    <div class="derecha"></div>
+  </div>
+  
+  
+
+
+
+</body>

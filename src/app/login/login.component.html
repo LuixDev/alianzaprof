@@ -1,0 +1,75 @@
+<nav class="bg-white dark:bg-gray-900 relative w-full z-20">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+    
+    <!-- Logo a la izquierda -->
+    <a href="#" class="space-x-3 rtl:space-x-reverse order-1 md:order-1 flex items-center">
+      <img src="assets/img/logo.png" alt="Logo" class="h-8">
+    </a>
+
+    <!-- Menú de navegación centrado -->
+    <div class="flex-grow flex justify-center order-2">
+      <ul class="flex space-x-3">
+        <li>
+          <a href="/" class="text-white font-bold text-sm">INICIO</a>
+        </li>
+        <li>
+          <a href="/formulario" class="text-white font-bold text-sm">FORMULARIO DE APROBACIÓN</a>
+        </li>
+        <li>
+          <a href="/contactanos" class="text-white font-bold text-sm">CONTACTANOS</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Ícono de usuario a la derecha -->
+    <a href="/login" class="user-icon order-3 md:ml-4">
+      <img src="assets/img/usuario2.png" alt="Ícono de usuario" class="rounded-full h-10 w-10 border-4 border-white transition-transform transform hover:scale-110">
+    </a>
+  </div>
+</nav>
+
+<div id="default-carousel" class="relative w-full h-screen">
+  <!-- Video de fondo -->
+  <div class="relative h-full w-full">
+    <video autoplay muted loop class="block w-full h-full object-cover">
+      <source src="assets/img/login-background.webm" type="video/webm">
+    </video>
+
+    <!-- Contenedor de la imagen y el formulario -->
+    <section class="absolute inset-0 flex items-center justify-center h-full">
+      <div class="flex w-full max-w-6xl items-center justify-between h-full">
+        <!-- Sección de la imagen -->
+        <div class="hidden md:block w-1/2 h-full">
+          <img src="assets/img/Recurso9.png" alt="Imagen de bienvenida" class="w-full h-full object-cover rounded-lg">
+        </div>
+
+        <!-- Sección del login -->
+        <div class="w-full md:w-1/2 h-full flex items-center">
+          <div class="bg-white rounded-lg shadow-lg border p-8 flex flex-col justify-center w-full h-full">
+            <h1 class="text-2xl font-bold text-gray-900">Inicia sesión en tu cuenta</h1>
+            <form class="space-y-4 w-full" action="#" aria-label="Formulario de inicio de sesión">
+              <div>
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Usuario</label>
+                <input type="text" name="text" id="text" aria-label="Text" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Usuario" required>
+              </div>
+              <div>
+                <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Contraseña</label>
+                <input type="password" name="password" id="password" aria-label="Contraseña" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="******" required>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-start">
+                  <input id="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-500">
+                  <label for="remember" class="ml-3 text-sm text-gray-500">Recuérdame</label>
+                </div>
+              </div>
+              <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 rounded-lg text-sm px-5 py-2.5 transition duration-300">Iniciar sesión</button>
+              <p class="text-sm font-light text-gray-500">
+                ¿Olvidaste la contraseña? <a href="#" class="font-medium text-blue-600 hover:underline">Recuperar</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,94 @@
+<nav class="bg-white dark:bg-gray-900 relative w-full z-20">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+    
+    <!-- Logo a la izquierda -->
+    <a href="#" class="space-x-3 rtl:space-x-reverse order-1 md:order-1 flex items-center">
+      <img src="assets/img/logo.png" alt="Logo" class="h-8">
+    </a>
+
+    <!-- Menú de navegación centrado -->
+    <div class="flex-grow flex justify-center order-2">
+      <ul class="flex space-x-3">
+        <li>
+          <a href="/" class="text-white font-bold text-sm">INICIO</a>
+        </li>
+        <li>
+          <a href="/formulario" class="text-white font-bold text-sm">FORMULARIO DE APROBACIÓN</a>
+        </li>
+        <li>
+          <a href="/contactanos" class="text-white font-bold text-sm">CONTACTANOS</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Ícono de usuario a la derecha -->
+    <a href="/login" class="user-icon order-3 md:ml-4">
+      <img src="assets/img/usuario2.png" alt="Ícono de usuario" class="rounded-full h-10 w-10 border-4 border-white transition-transform transform hover:scale-110">
+    </a>
+  </div>
+</nav>
+
+<body>
+  <div id="default-carousel" class="relative w-full h-screen">
+    <div class="relative h-full">
+      <video autoplay muted loop class="block w-full h-full object-cover">
+        <source src="assets/img/login-background.webm" type="video/webm">
+      </video>
+  
+      <div class="container">
+        <!-- Sección de Datos de Cuenta -->
+        <div class="section">
+          <h2>Datos de Cuenta</h2>
+          <div class="input-group horizontal">
+            <input type="text" placeholder="Nombre de Cuenta" class="half-width" />
+            <input type="password" placeholder="Contraseña" class="half-width" />
+            <span class="icon"></span>
+          </div>
+        </div>
+  
+        <!-- Contenedor para Datos del Encargado y Datos de Agencia -->
+        <div class="horizontal-container">
+          <!-- Sección de Datos del Encargado -->
+        <div class="section" style="width: 43%;">
+          <h2>Datos del Encargado</h2>
+          <div class="input-group">
+            <input type="email" placeholder="Tu e-mail" class="full-width" />
+          </div>
+          <div class="input-group">
+            <input type="text" placeholder="Nombres" class="full-width" />
+          </div>
+          <div class="input-group">
+            <input type="text" placeholder="Apellidos" class="full-width" />
+          </div>
+          <div class="input-group">
+            <input type="date" placeholder="Fecha de Nacimiento" class="full-width" />
+          </div>
+        </div>
+  
+          <!-- Sección de Datos de Agencia -->
+          <div class="section">
+            <h2>Datos de Agencia</h2>
+            <div class="input-group horizontal">
+              <input type="text" placeholder="Nombre de Agencia" class="half-width" />
+              <input type="file" class="half-width" />
+              <span class="icon"></span>
+            </div>
+            <div class="input-group horizontal">
+              <input type="text" placeholder="Escribe tu emoji" class="half-width" />
+              <input type="tel" placeholder="Teléfono" class="half-width" />
+            </div>
+            <div class="input-group horizontal">
+              <input type="text" placeholder="Color" class="half-width" />
+              <input type="text" placeholder="Escribe tu razón para unirte" class="half-width" />
+            </div>
+          </div>
+        </div>
+  
+        <!-- Botón de enviar -->
+        <div class="submit-btn">
+          <button (click)="onSubmit()">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

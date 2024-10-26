@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+    font-family: "burbank";
+    font-style: normal; /* Cambiado de 'regular' a 'normal' */
+    font-weight: 400;
+    src: url("assets/fonts/burbank.woff") format("woff"); /* Corrección de la ruta y formato */
+}
+
+@font-face {
+    font-family: "montserrat";
+    font-style: normal; /* Cambiado de 'regular' a 'normal' */
+    font-weight: 400;
+    src: url("assets/fonts/Montserrat.ttf") format("truetype"); /* Asegúrate de que la ruta sea correcta */
+}
