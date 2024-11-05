@@ -1,0 +1,199 @@
+/* Estilos del navbar */
+header {
+  background: linear-gradient(90deg, rgba(147, 39, 226, 0.9), rgba(41, 169, 255, 0.9));
+  padding: 5px 10px;
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos del navbar */
+nav {
+  background: linear-gradient(90deg, rgba(255, 0, 0, 0.9), rgba(0, 0, 255, 0.9)); /* Degradado de rojo a azul */
+  padding: 5px 10px;
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: -1px; /* Evita el espacio entre navbar y menú */
+}
+
+nav .welcome-title {
+  font-size: 1.25rem; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  color: white; /* Color del texto */
+  background: white;
+  -webkit-background-clip: text; /* Clipping del fondo */
+  -webkit-text-fill-color: transparent; /* Relleno del texto transparente */
+  padding: 5px; /* Ajustar espaciado */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px; /* Reducir espaciado */
+  border-radius: 20px; /* Bordes redondeados */
+  transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo al pasar el mouse */
+  transform: scale(1.05); /* Efecto de zoom */
+}
+
+/* Estilos del ícono de usuario */
+.user-icon img {
+  max-height: 50px;
+  border-radius: 50%;
+  border: 4px solid white;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+
+/* Estilos del ícono de usuario */
+.user-icon img {
+  max-height: 50px;
+  border-radius: 50%;
+  border: 4px solid white;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.user-icon img:hover {
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.8); /* Cambio de borde al pasar el mouse */
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h3.form-title {
+  color: #933BEC; /* Color distintivo */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-transform: uppercase; /* Mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+}
+.navega {
+  padding: 25px 0; /* Ajustar padding superior e inferior */
+  background-color: rgba(3, 3, 3, 0.84);
+}
+.nav-link {
+  padding: 1px 1px; /* Reducir espaciado interno */
+  color: white; /* Color del texto */
+  font-weight: bold; /* Negrita */
+  text-transform: uppercase; /* Convertir a mayúsculas */
+  white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+  margin: 1px 1px; /* Espaciado horizontal entre los enlaces */
+}
+
+ul {
+  display: flex; /* Flexbox para distribución */
+  justify-content: center; /* Centra los elementos */
+  font-size: 15px;
+  padding: 0; /* Quitar padding del ul */
+  margin: 0; /* Quitar margin del ul */
+  list-style: none; /* Quitar puntos de la lista */
+}
+/* Estilos del formulario */
+.form-container, .filter-form {
+  background: rgba(240, 248, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+/* Estilos de los inputs */
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid rgba(147, 39, 226, 0.6);
+  border-radius: 10px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-size: 16px;
+}
+
+input:focus, select:focus {
+  border-color: #29A9FF;
+  box-shadow: 0 0 8px rgba(41, 169, 255, 0.5);
+}
+
+/* Botones */
+button {
+  background: linear-gradient(90deg, rgba(147, 39, 226, 1), rgba(41, 169, 255, 1));
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  width: 100%;
+  font-size: 16px;
+}
+
+button:hover {
+  background: linear-gradient(90deg, rgba(147, 39, 226, 0.9), rgba(41, 169, 255, 0.9));
+  transform: translateY(-2px);
+}
+
+/* Estilos de la tabla */
+.battle-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+.battle-table th, .battle-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(147, 39, 226, 0.3);
+}
+
+.battle-table th {
+  background: rgba(147, 39, 226, 0.2);
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: bold;
+}
+
+.battle-table tr:hover {
+  background: rgba(41, 169, 255, 0.1);
+}
+
+.join-button {
+  background: linear-gradient(90deg, rgba(147, 39, 226, 1), rgba(41, 169, 255, 1));
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.join-button:hover {
+  background: linear-gradient(90deg, rgba(147, 39, 226, 0.9), rgba(41, 169, 255, 0.9));
+  transform: translateY(-2px);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  input, button {
+    font-size: 14px;
+  }
+}

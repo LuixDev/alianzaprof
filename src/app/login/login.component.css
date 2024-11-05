@@ -73,15 +73,25 @@ button {
   transition: background-color 0.3s, transform 0.3s;
 }
 
-button:hover {
-  background: linear-gradient(90deg, rgba(147, 39, 226, 0.9), rgba(41, 169, 255, 0.9)); /* Cambio de fondo al pasar el mouse */
-  transform: scale(1.05); /* Efecto de zoom */
+#menu-toggle {
+  all: unset; /* Resetea todos los estilos */
+  cursor: pointer; /* Muestra el cursor de pointer en hover */
+  color: white; /* Cambia el color del botón e ícono a blanco */
+  visibility: hidden; /* Oculta el botón por defecto */
 }
 
-/* Estilo para enlaces */
-a {
-  color: rgba(147, 39, 226, 1); /* Color morado para enlaces */
+/* Solo visible en pantallas móviles */
+@media (max-width: 768px) { /* Ajusta el tamaño según tus necesidades */
+  #menu-toggle {
+      visibility: visible; /* Hace que el botón sea visible en modo móvil */
+  }
 }
+
+
+
+
+/* Estilo para enlaces */
+
 
 a:hover {
   text-decoration: underline; /* Subrayado al pasar el mouse */

@@ -105,3 +105,17 @@ nav a:hover {
 .derecha {
   background-image: url('/assets/img/Recurso7.png'); /* Imagen de la derecha */
 }
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    align-items: center; /* Alinea los elementos en el centro */
+    gap: 15px; /* Espacio entre los elementos */
+  }
+}
+#mobile-nav-menu {
+  display: none; /* Por defecto, oculto */
+}
+
+#mobile-nav-menu.ng-enter {
+  display: block; /* Mostrar cuando se activa */
+}

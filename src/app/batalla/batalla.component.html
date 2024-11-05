@@ -1,0 +1,155 @@
+<nav>
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+    
+    <!-- Título a la izquierda -->
+    <div class="flex items-center order-1 md:order-1">
+      <h1 class="welcome-title">BIENVENIDO USUARIO</h1>
+    </div>
+
+    <!-- Logo centrado -->
+    <a routerLink="/" class="space-x-3 rtl:space-x-reverse order-2 flex items-center justify-center flex-grow">
+      <img src="assets/img/logo.png" alt="Logo" class="h-8">
+    </a>
+
+    <!-- Ícono de usuario a la derecha -->
+    <a routerLink="/login" class="user-icon order-3 md:ml-4">
+      <img src="assets/img/usuario2.png" alt="Ícono de usuario" class="rounded-full h-10 w-10 border-4 border-white transition-transform transform hover:scale-110">
+    </a>
+  </div>
+</nav>
+
+<div class="navega">
+  <ul class="flex justify-center space-x-4">
+    <li><a href="/cuentas" class="nav-link">CUENTAS</a></li>
+    <li><a href="/solicitud" class="nav-link">SOLICITUDES</a></li>
+    <li><a href="/batallas" class="nav-link">BATALLAS DISPONIBLES</a></li>
+    <li><a href="/batallas-mayo" class="nav-link">BATALLAS DE MAYO</a></li>
+    <li><a href="/batallas-fuertes" class="nav-link">BATALLAS FUERTES</a></li>
+    <li><a href="/batallas-relampagos" class="nav-link">BATALLAS RELÁMPAGOS</a></li>
+    <li><a href="/batallas-x4" class="nav-link">BATALLAS X4</a></li>
+    <li><a href="/batallas-internacionales" class="nav-link">BATALLAS INTERNACIONALES</a></li>
+  </ul>
+</div>
+
+<div class="container">
+  <button class="toggle-form" (click)="mostrarFormulario = !mostrarFormulario">
+    {{ mostrarFormulario ? 'Ocultar Formulario' : 'Agregar Nueva Batalla' }}
+  </button>
+
+  <div *ngIf="mostrarFormulario" class="form-container">
+    <form (ngSubmit)="agregarBatalla()" #batallaForm="ngForm">
+      <h3 class="form-title">Agregar Nueva Batalla</h3>
+      <div class="form-group">
+        <label>Fecha:</label>
+        <input type="date" name="fecha" [(ngModel)]="nuevaBatalla.fecha" required>
+      </div>
+
+      <div class="form-group">
+        <label>Hora:</label>
+        <input type="time" name="hora" [(ngModel)]="nuevaBatalla.hora" required>
+      </div>
+
+      <div class="form-group">
+        <label>Agencias:</label>
+        <input type="text" name="agencia" [(ngModel)]="nuevaBatalla.agencia" required>
+      </div>
+
+      <div class="form-group">
+        <label>Usuarios:</label>
+        <input type="text" name="usuarios" [(ngModel)]="nuevaBatalla.usuarios" required>
+      </div>
+
+      <div class="form-group">
+        <label>Objetivo:</label>
+        <input type="text" name="objetivo" [(ngModel)]="nuevaBatalla.objetivo" required>
+      </div>
+
+      <div class="form-group">
+        <label>Rondas:</label>
+        <input type="number" name="rondas" [(ngModel)]="nuevaBatalla.rondas" required>
+      </div>
+
+      <div class="form-group">
+        <label>Observaciones:</label>
+        <input type="text" name="observaciones" [(ngModel)]="nuevaBatalla.observaciones">
+      </div>
+
+      <div class="form-group">
+        <label>Reto:</label>
+        <input type="text" name="reto" [(ngModel)]="nuevaBatalla.reto" required>
+      </div>
+
+      <div class="form-group">
+        <label>Tipo de Batalla:</label>
+        <input type="text" name="tipo" [(ngModel)]="nuevaBatalla.tipo" required>
+      </div>
+
+      <button type="submit" class="submit-button">Agregar Batalla</button>
+    </form>
+  </div>
+
+  <form (ngSubmit)="filtrarBatallas()" #filtroForm="ngForm" class="filter-form">
+    <h3 class="form-title">Filtrar Batallas</h3>
+    <div class="form-group">
+      <label>Tipo de Batalla:</label>
+      <select name="tipo" [(ngModel)]="filtros.tipo">
+        <option value="">Todos</option>
+        <option value="fuerte">Fuerte</option>
+        <option value="amistosa">Amistosa</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Fecha:</label>
+      <input type="date" name="fecha" [(ngModel)]="filtros.fecha">
+    </div>
+    <div class="form-group">
+      <label>Agencia/Streamer:</label>
+      <select name="agencia" [(ngModel)]="filtros.agencia">
+        <option value="agencia">Agencia</option>
+        <option value="streamer">Streamer</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Nombre:</label>
+      <input type="text" name="name" [(ngModel)]="filtros.nombre">
+    </div>
+    <button type="submit" class="filter-button">Filtrar</button>
+  </form>
+
+  <table class="battle-table">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Agencias</th>
+        <th>Usuarios</th>
+        <th>Objetivo</th>
+        <th>Rondas</th>
+        <th>Observaciones</th>
+        <th>Reto</th>
+        <th>Tipo de Batalla</th>
+        <th>Unirse</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let batalla of batallasFiltradas">
+        <td>{{ batalla.fecha }}</td>
+        <td>{{ batalla.hora }}</td>
+        <td>{{ batalla.agencia }}</td>
+        <td>{{ batalla.usuarios }}</td>
+        <td>{{ batalla.objetivo }}</td>
+        <td>{{ batalla.rondas }}</td>
+        <td>{{ batalla.observaciones }}</td>
+        <td>{{ batalla.reto }}</td>
+        <td>{{ batalla.tipo }}</td>
+        <td>
+          <button class="join-button" (click)="enviarSolicitud(batalla)">Unirse</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>
+
+
+  

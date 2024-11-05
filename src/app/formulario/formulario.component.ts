@@ -15,6 +15,12 @@ import { Router } from '@angular/router';
 export class FormularioComponent implements OnInit {
   form: FormGroup;
   formData: any;
+  isMenuVisible = false;
+
+  toggleMenu() {
+    this.isMenuVisible = !this.isMenuVisible;
+    console.log('Menu toggled:', this.isMenuVisible); // Verifica si la función se llama y el estado cambia
+  }
 
   constructor(private fb: FormBuilder,  private router: Router) {
     this.form = this.fb.group({});
@@ -36,22 +42,13 @@ export class FormularioComponent implements OnInit {
       reason: ['', Validators.required],
     });
 
-    // Cargar datos del localStorage si están disponibles
-    if (typeof window !== 'undefined' && window.localStorage) {
-      const storedData = localStorage.getItem('formData');
-      if (storedData) {
-        this.formData = JSON.parse(storedData);
-        console.log('Datos recibidos:', this.formData);
-      }
-    }
+  
   }
 
+  
   onSubmit() {
     if (this.form.valid) {
-      const formData = this.form.value;
-      localStorage.setItem('formData', JSON.stringify(formData));
-      console.log('Datos guardados en localStorage:', formData);
-      this.router.navigate(['/agencia']); // Redirigir a la página de Agencia
+   
     } else {
       console.error('El formulario no es válido');
     }
