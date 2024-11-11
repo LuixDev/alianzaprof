@@ -1,113 +1,65 @@
-<nav class="bg-white dark:bg-gray-900 relative w-full z-20">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
-      <!-- Logo a la izquierda -->
-      <a href="#" class="space-x-3 rtl:space-x-reverse order-1 md:order-1 flex items-center">
-          <img src="assets/img/logo.png" alt="Logo" class="h-8">
-      </a>
+<app-navbar></app-navbar>
 
-      <!-- Botón de hamburguesa en dispositivos móviles -->
-      <button id="menu-toggle" (click)="toggleMenu()" class="text-white md:hidden focus:outline-none focus:ring-2 focus:ring-gray-300 p-2">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-      </button>
+<div class="relative w-full min-h-screen overflow-y-auto">
+  <video autoplay muted loop class="fixed top-0 left-0  w-full h-full object-cover -z-10">
+    <source src="assets/img/login-background.webm" type="video/webm">
+  </video>
 
-      <!-- Menú de navegación que se oculta/muestra -->
+  <div class="flex flex-col mt-24 mb-8 items-center h-full w-full">
+    <form action="" class="w-4/5 flex flex-col flex-wrap md:flex-row md:justify-around">
+      <!-- Sección de Datos de Cuenta -->
+      <div class="section flex flex-col justify-center mb-10 p-5 rounded-lg md:w-[45%]">
+        <h2>Datos de Cuenta</h2>
 
-  <div *ngIf="isMenuVisible" id="mobile-nav-menu" class="md:hidden">
-    <ul>
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/formulario">Formulario de Aprobación</a></li>
-        <li><a href="/contactanos">Contáctanos</a></li>
-    </ul>
-  </div>
-
-
-      <!-- Menú de navegación centrado -->
-      <div id="desktop-nav-menu" class="hidden md:flex flex-grow justify-center order-2">
-          <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-3">
-              <li>
-                  <a href="/" class="text-white font-bold text-sm">INICIO</a>
-              </li>
-              <li>
-                  <a href="/formulario" class="text-white font-bold text-sm">FORMULARIO DE APROBACIÓN</a>
-              </li>
-              <li>
-                  <a href="/contactanos" class="text-white font-bold text-sm">CONTACTANOS</a>
-              </li>
-          </ul>
-      </div>
-
-      <!-- Ícono de usuario a la derecha -->
-      <a href="/login" class="user-icon order-3 md:ml-4">
-          <img src="assets/img/usuario2.png" alt="Ícono de usuario" class="rounded-full h-10 w-10 border-4 border-white transition-transform transform hover:scale-110">
-      </a>
-  </div>
-</nav>
-
-
-
-<body>
-  <div id="default-carousel" class="relative w-full h-screen">
-    <div class="relative h-full">
-      <video autoplay muted loop class="block w-full h-full object-cover">
-        <source src="assets/img/login-background.webm" type="video/webm">
-      </video>
-  
-      <div class="container">
-        <!-- Sección de Datos de Cuenta -->
-        <div class="section">
-          <h2>Datos de Cuenta</h2>
-          <div class="input-group horizontal">
-            <input type="text" placeholder="Nombre de Cuenta" class="half-width" />
-            <input type="password" placeholder="Contraseña" class="half-width" />
-            <span class="icon"></span>
-          </div>
-        </div>
-  
-        <!-- Contenedor para Datos del Encargado y Datos de Agencia -->
-        <div class="horizontal-container">
-          <!-- Sección de Datos del Encargado -->
-        <div class="section" style="width: 43%;">
-          <h2>Datos del Encargado</h2>
-          <div class="input-group">
-            <input type="email" placeholder="Tu e-mail" class="full-width" />
-          </div>
-          <div class="input-group">
-            <input type="text" placeholder="Nombres" class="full-width" />
-          </div>
-          <div class="input-group">
-            <input type="text" placeholder="Apellidos" class="full-width" />
-          </div>
-          <div class="input-group">
-            <input type="date" placeholder="Fecha de Nacimiento" class="full-width" />
-          </div>
-        </div>
-  
-          <!-- Sección de Datos de Agencia -->
-          <div class="section">
-            <h2>Datos de Agencia</h2>
-            <div class="input-group horizontal">
-              <input type="text" placeholder="Nombre de Agencia" class="half-width" />
-              <input type="file" class="half-width" />
-              <span class="icon"></span>
-            </div>
-            <div class="input-group horizontal">
-              <input type="text" placeholder="Escribe tu emoji" class="half-width" />
-              <input type="tel" placeholder="Teléfono" class="half-width" />
-            </div>
-            <div class="input-group horizontal">
-              <input type="text" placeholder="Color" class="half-width" />
-              <input type="text" placeholder="Escribe tu razón para unirte" class="half-width" />
-            </div>
-          </div>
-        </div>
-  
-        <!-- Botón de enviar -->
-        <div class="submit-btn">
-          <button (click)="onSubmit()">Enviar</button>
+        <div class="flex flex-col items-center md:flex-row md:justify-center md:flex-wrap">
+          <input type="text" placeholder="Nombre de Cuenta"
+            class="w-4/5 mb-4 p-2.5 h-12 text bg-white border-2 rounded-lg focus:outline-none focus:ring focus:ring-blue-500 border-violet-600" />
+          <input type="password" placeholder="Contraseña"
+            class="w-4/5 p-2.5 h-12 text bg-white border-2 rounded-lg focus:outline-none focus:ring focus:ring-blue-500 border-violet-600" />
         </div>
       </div>
-    </div>
+
+      <!-- Sección de Datos del Encargado -->
+      <div class="section flex flex-col mb-10 p-5 rounded-lg md:w-[45%]">
+        <h2>Datos del Encargado</h2>
+
+        <div class="flex flex-col items-center md:flex-row md:justify-around md:flex-wrap">
+          <input type="email" placeholder="Tu e-mail"
+            class="w-4/5 md:w-[45%] mb-4 p-2.5 h-12 text bg-white border-2 rounded-lg focus:outline-none focus:ring focus:ring-blue-500 border-violet-600" />
+          <input type="text" placeholder="Nombres"
+            class="w-4/5 md:w-[45%] mb-4 p-2.5 h-12 text bg-white border-2 rounded-lg focus:outline-none focus:ring focus:ring-blue-500 border-violet-600" />
+          <input type="text" placeholder="Apellidos"
+            class="w-4/5 md:w-[45%] mb-4 md:mb-0 p-2.5 h-12 text bg-white border-2 rounded-lg focus:outline-none focus:ring focus:ring-blue-500 border-violet-600" />
+          <input type="date" placeholder="Fecha de Nacimiento"
+            class="w-4/5 md:w-[45%] p-2.5 h-12 text bg-white border-2 rounded-lg focus:outline-none focus:ring focus:ring-blue-500 border-violet-600" />
+        </div>
+      </div>
+
+      <!-- Sección de Datos de Agencia -->
+      <div class="section flex flex-col justify-center mb-10 p-5 rounded-lg md:w-[95%]">
+        <h2>Datos de Agencia</h2>
+
+        <div class="flex flex-col items-center md:flex-row md:justify-evenly md:flex-wrap">
+          <input type="text" placeholder="Nombre de Agencia"
+            class="w-4/5 md:w-[45%] mb-4 p-2.5 h-12 text bg-white border-2 rounded-lg focus:outline-none focus:ring focus:ring-blue-500 border-violet-600" />
+          <input type="file"
+            class="w-4/5 md:w-[45%] mb-4 p-2.5 h-12 text bg-white border-2 rounded-lg focus:outline-none focus:ring focus:ring-blue-500 border-violet-600" />
+          <input type="text" placeholder="Escribe tu emoji"
+            class="w-4/5 md:w-[45%] mb-4 p-2.5 h-12 text bg-white border-2 rounded-lg focus:outline-none focus:ring focus:ring-blue-500 border-violet-600" />
+          <input type="tel" placeholder="Teléfono"
+            class="w-4/5 md:w-[45%] mb-4 p-2.5 h-12 text bg-white border-2 rounded-lg focus:outline-none focus:ring focus:ring-blue-500 border-violet-600" />
+          <input type="text" placeholder="Color"
+            class="w-4/5 md:w-[45%] md:mb-0 mb-4 p-2.5 h-12 text bg-white border-2 rounded-lg focus:outline-none focus:ring focus:ring-blue-500 border-violet-600" />
+          <input type="text" placeholder="Escribe tu razón para unirte"
+            class="w-4/5 md:w-[45%] p-2.5 h-12 text bg-white border-2 rounded-lg focus:outline-none focus:ring focus:ring-blue-500 border-violet-600" />
+        </div>
+      </div>
+
+      <!-- Botón de enviar -->
+
+      <button (click)="onSubmit()"
+        class="text-center w-full h-12 button-send text-white font-bold rounded-xl p-2.5 transition-all shadow-md md:w-1/5">Enviar</button>
+
+    </form>
   </div>
-</body>
+</div>

@@ -1,21 +1,15 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NavbarComponent } from '../navbar/navbar.component';
+
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [CommonModule],
+  imports: [NavbarComponent],
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css'] 
-
-
 })
+
 export class InicioComponent {
 
-  isMenuVisible = false;
-
-  toggleMenu() {
-    this.isMenuVisible = !this.isMenuVisible;
-    console.log('Menu toggled:', this.isMenuVisible); // Verifica si la función se llama y el estado cambia
-  }
 }
 

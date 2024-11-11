@@ -1,150 +1,21 @@
-header, nav {
-  background: linear-gradient(90deg, rgba(147, 39, 226, 0.9), rgba(41, 169, 255, 0.9));
-  padding: 5px 10px;
-  width: 100%;
-  z-index: 1000;
-
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-
-}
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 10px 15px;
- 
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-
-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: scale(1.05);
-}
-
-
-.user-icon img {
-  max-height: 50px;
-  border-radius: 50%;
-  border: 4px solid white;
-  transition: transform 0.3s, border-color 0.3s;
-}
-
-.user-icon img:hover {
-  transform: scale(1.1);
-  border-color: rgba(255, 255, 255, 0.8);
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  nav ul {
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-  }
-}
-
-
-
-
-
-
-/* Contenedor principal ajustado */
-.container {
-  width: 100%;
-  max-width: 97%;  /* Aumenta el ancho máximo según sea necesario */
-  margin: 80px auto 0;  /* Añade margen superior para separar del navbar */
-
-  border-radius: 10px;
-  padding: 40px;  /* Más espacio interior */
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-height: none; /* Para permitir que la altura se ajuste automáticamente */
-  height: 100%;
-}
-
-/* Video */
-#default-carousel {
-  position: relative;
-  height: 100vh; /* Ocupar toda la altura de la ventana */
-
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Asegura que el video cubra todo sin distorsión */
-  margin: 0;
-  padding: 0;
-}
 
 /* Sección del formulario */
 .section {
-  margin-bottom: 40px;  /* Aumenta el espacio entre secciones */
-  padding: 20px; /* Espacio interno incrementado */
-  border: 1px solid #ddd; /* Borde alrededor de la sección */
-  border-radius: 10px; /* Bordes redondeados */
-  background-color: rgba(255, 255, 255, 0.8); /* Fondo ligeramente transparente */
-}
-
-/* Contenedor horizontal para Datos del Encargado y Datos de Agencia */
-.horizontal-container {
-  display: flex; /* Usar flexbox para disposición horizontal */
-  justify-content: space-between; /* Espacio entre secciones */
-  margin-bottom: 40px; /* Espacio inferior adicional entre grupos */
-}
-
-/* Estilo para grupos de entrada en horizontal */
-.input-group {
-  display: flex; /* Usar flexbox para distribución horizontal */
-  justify-content: space-between; /* Espacio entre elementos */
-  margin-bottom: 25px; /* Espacio entre grupos de entrada incrementado */
-}
-
-.full-width {
-  width: 100%; /* Ocupar el 100% del ancho del grupo */
-}
-
-.half-width {
-  width: 48%; /* Ocupa el 48% del ancho del grupo, dejando espacio para el margen */
+  background-color: rgba(255, 255, 255, 0.6); /* Fondo ligeramente transparente */
 }
 
 /* Títulos de las secciones */
 h2 {
   background: linear-gradient(to right, #3b82f6, #9333ea);
+  text-align: center;
   color: white;
   padding: 10px 20px;
-  font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
-  border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  display: block; /* Cambiado a block */
   position: relative;
   top: -20px; /* Ajuste visual */
   transform: skew(-20deg); /* Inclinación */
-  margin: 0 auto; /* Centrando */
-  text-align: center;
 }
 
 h2::before {
@@ -165,34 +36,17 @@ input[type="password"],
 input[type="date"],
 input[type="tel"],
 input[type="file"] {
-  padding: 15px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  font-size: 1rem;
-  background-color: #f9f9f9;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 input:focus {
-  border-color: #3b82f6;
-  outline: none;
+  border-color: rgba(41, 169, 255, 0.8); /* Cambia el color del borde al enfocar */
+  box-shadow: 0 0 5px rgba(41, 169, 255, 0.5); /* Sombra al enfocar */
 }
 
-/* Botón de envío */
-.submit-btn {
-  text-align: center;
-  margin-top: 25px;
-}
 
 button {
   background: linear-gradient(to right, #ec4899, #3b82f6);
-  color: white;
-  border: none;
-  border-radius: 50px;
-  padding: 20px 35px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
   transition: background 0.3s ease;
 }
 
