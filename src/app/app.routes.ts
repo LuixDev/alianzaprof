@@ -10,8 +10,8 @@ import { ContactanosComponent } from './contactanos/contactanos.component';
 import { PasswordrecuperacionComponent } from './passwordrecuperacion/passwordrecuperacion.component';
 import { CuentasComponent } from './cuentas/cuentas.component';
 import { SolicitudComponent } from './solicitud/solicitud.component';
-import { NavbarComponent } from './navbar/navbar.component';
 
+import { AuthGuard } from './auth.guard'; 
 // Define las rutas
 export const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full' }, // Redirige la raíz a la página de inicio
@@ -19,11 +19,10 @@ export const routes: Routes = [
   { path: 'formulario', component: FormularioComponent },
   { path: 'contactanos', component: ContactanosComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'batallas', component: BatallaComponent },
-  {path: 'solicitud', component: SolicitudComponent},
-  { path: 'cuentas', component: CuentasComponent },
+  { path: 'batallas', component: BatallaComponent, canActivate: [AuthGuard] },
+  { path: 'solicitud', component: SolicitudComponent, canActivate: [AuthGuard] },
+  { path: 'cuentas', component: CuentasComponent, canActivate: [AuthGuard] },
   { path: 'recuperacion', component: PasswordrecuperacionComponent },
-  { path: 'navbar', component: NavbarComponent},
   
 ];
 

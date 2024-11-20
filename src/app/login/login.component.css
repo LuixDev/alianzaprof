@@ -1,5 +1,22 @@
-/* Estilos del formulario de login */
+nav {
+  background: linear-gradient(90deg, rgba(147, 39, 226, 0.9), rgba(41, 169, 255, 0.9));
+}
 
+nav a {
+  transition: all 0.3s ease;
+}
+
+.menu-mobile li {
+  margin-bottom: 1rem !important;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.section {
+  background-color: rgba(255, 255, 255, 0.6); /* Fondo ligeramente transparente */
+}
 .input {
   transition: border-color 0.3s;
 }

@@ -1,40 +1,293 @@
-
-
-.custom-width {
-  width: 90%;
+nav {
+  background: linear-gradient(90deg, rgba(147, 39, 226, 0.9), rgba(41, 169, 255, 0.9));
 }
 
-/* Banner Background */
-.banner-background {
-  background: linear-gradient(to right, #e05578, #8b2d54);
-  height: 50px;
-  position: relative;
-  margin-top: -4px;
-  opacity: 0.8;
+nav a {
+  transition: all 0.3s ease;
 }
 
+.menu-mobile li {
+  margin-bottom: 1rem !important;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.section {
+  background-color: rgba(255, 255, 255, 0.6); /* Fondo ligeramente transparente */
+}
+.input {
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: rgba(41, 169, 255, 0.8);
+  box-shadow: 0 0 5px rgba(41, 169, 255, 0.5);
+}
+
+button {
+  background: linear-gradient(to right, #ec4899, #3b82f6);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #9333ea, #ec4899);
+}
+
+
+/* Estilo para los íconos de hamburguesa */
+.hamburger-icon {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  cursor: pointer;
+}
+
+.hamburger-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Menú en pantallas pequeñas */
+#menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #1f2937;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+#menu ul li a {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  display: block;
+}
+
+/* Menú en pantallas grandes */
+@media (min-width: 768px) {
+  #menu {
+    display: flex;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  #menu ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  #menu ul li a {
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  /* Quitar el ícono hamburguesa en pantallas grandes */
+  .hamburger-icon {
+    display: none;
+  }
+}
+
+/* Ajustes en el contenedor principal */
+.container {
+width: 100%;
+padding: 0 20px;
+margin: 0 auto;
+}
+
+.project {
+width: 100%;
+margin: 0 auto;
+}
+
+/* Estilos generales para dispositivos móviles */
+@media (max-width: 768px) {
+/* Ajustar el navbar */
+nav ul {
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-icon {
+  margin-right: 0;
+  margin-top: 10px;
+}
+
+nav a {
+  font-size: 12px;
+  padding: 8px 12px;
+}
 
 .contenedor {
-  position: relative;
-  display: flex;
-  justify-content: space-between; /* Alinea los elementos en los extremos */
-  align-items: center; /* Alinea los elementos verticalmente en el centro */
-  height: 36vh; /* Ajusta la altura */
-
+  flex-direction: column;
+  height: auto;
 }
 
 .izquierda, .derecha {
-  width: 26vw; /* Asegura que cada imagen ocupe un ancho específico */
-  height: 100%; /* Ocupará el 100% de la altura del contenedor */
-  background-size: contain; /* Mantiene la proporción de las imágenes */
-
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  width: 100%;
+  height: auto;
+  background-size: cover;
 }
 
-.izquierda {
-  background-image: url('/assets/img/Recurso6.png'); /* Imagen de la izquierda */
+/* Logo responsive */
+.logo {
+  max-height: 30px;
 }
 
-.derecha {
-  background-image: url('/assets/img/Recurso7.png'); /* Imagen de la derecha */
+/* Ajustes en las secciones */
+.header, .footer {
+  text-align: center;
 }
+
+.project img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+h1, h2, h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+}
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+nav a {
+  font-size: 10px;
+  padding: 5px 10px;
+}
+
+.contenedor {
+  height: auto;
+}
+
+.logo {
+  max-height: 25px;
+}
+
+.izquierda, .derecha {
+  width: 100%;
+  height: auto;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+h1, h2, h3 {
+  font-size: 1.2rem;
+}
+}
+
+@media (max-width: 1024px) {
+#default-carousel {
+  height: auto;
+  
+}
+}
+
+@media (max-width: 768px) {
+.p-4 {
+  padding: 1rem !important;
+}
+
+.gap-8 {
+  gap: 4px !important;
+}
+
+.h-56 {
+  height: 32 !important;
+}
+}
+
+/* Seccion 1 */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+.contenedorOne {
+margin-top: 400px;
+}
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+.sectionOne {
+ 
+}
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+.sectionOne__img1 {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ margin-top: 40px;
+}
+}
+
+.perfil-img {
+width: 60px;
+height: 60px;
+position: absolute;
+top: 0;
+right: 20px;/* Ajusta este valor según sea necesario para posicionar la imagen correctamente */
+z-index: 10;
+}
+
+.perfil-img-3 {
+width: 60px;
+height: 60px;
+position: absolute;
+top: 0;
+left: 35px; /* Ajusta este valor según sea necesario */
+z-index: 10;
+}
+.perfil-img-3-left {
+width: 40px;
+height: 40px;
+position: absolute;
+top: -5px;
+left: -20px;
+z-index: 10;
+}
+
+.perfil-img-3-right {
+width: 40px;
+height: 40px;
+position: absolute;
+top: -5px;
+right: -20px;
+z-index: 10;
+}
+
+
+
+.text-left {
+position: absolute;
+left: 20px;  /* Ajusta según sea necesario */
+}
+
+.text-right {
+position: absolute;
+right: 20px; /* Ajusta según sea necesario */
+}
+
